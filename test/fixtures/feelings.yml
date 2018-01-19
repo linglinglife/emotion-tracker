@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: feelings
+#
+#  id          :integer          not null, primary key
+#  scale       :integer
+#  title       :text
+#  description :text
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scale: 1
+  title: MyText
+  description: MyText
+  user_id: 1
+
+two:
+  scale: 1
+  title: MyText
+  description: MyText
+  user_id: 1
