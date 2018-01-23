@@ -1,10 +1,14 @@
-<h1><%= @user.name %>'s Feelings Profile</h1>
+<h1><%= @user.name %>'s Feelings Log</h1>
 
 <ul>
   <% @user.feelings.each do |feeling| %>
 
     <li>
-      <strong><%= feeling.scale %></strong>, <%= feeling.title %>
+      <strong><%= feeling.created_at.to_time.strftime('%B %e, %Y at %l:%M %p') %></strong>
+      <br>
+      <%= feeling.scale %>, <%= feeling.title %>
+      <br>
+      <%= feeling.description %>
     </li>
 
   <% end %>
