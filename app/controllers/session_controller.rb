@@ -1,6 +1,7 @@
 class SessionController < ApplicationController
   
   def new
+    
   end
 
   def create
@@ -10,7 +11,7 @@ class SessionController < ApplicationController
       
       session[:user_id] =  user.id 
     
-      redirect_to root_path
+      redirect_to pages_profile_path
     else
   
       flash[:error] = "Invalid username or password" 
