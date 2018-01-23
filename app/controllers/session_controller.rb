@@ -11,7 +11,7 @@ class SessionController < ApplicationController
       
       session[:user_id] =  user.id 
     
-      redirect_to pages_profile_path
+      redirect_to user
     else
   
       flash[:error] = "Invalid username or password" 
@@ -21,6 +21,8 @@ class SessionController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
+    redirect_to root_path
   end
   
 end

@@ -18,6 +18,14 @@ class UsersController < ApplicationController
       flash[:errors] = user.errors.full_messages
       redirect_to new_user_path
     end
+    
+    # if params[:file].present?
+    #   req = Cloudinary::Uploader.upload(params[:file])
+    #   user.image = req["public_id"]
+    # end
+    
+    #   user.save
+    #   redirect_to user
       
   end
 
@@ -31,6 +39,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find params[:id]
+    # @user.feelings
   end
 
   def destroy
