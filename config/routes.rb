@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
   
+
+
+  root to: 'pages#home'
+  get '/pages/home'
+  
+  # resources :pages
+  
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
+  
   resources :users
 
   # get 'users/new'
@@ -8,17 +19,16 @@ Rails.application.routes.draw do
   # get 'users/update'
   # get 'users/show'
   # get 'users/destroy'
+  
+  resources :feelings do
+    resources :comments
+  end
+  
+  # get 'feelings/new'
+  # get 'feelings/create'
+  # get 'feelings/edit'
+  # get 'feelings/show'
+  # get 'feelings/update'
+  # get 'feelings/destroy'
 
-  root to: 'pages#home'
-  
-  get '/pages/home'
-  
-  # get '/pages/profile'
-  
-  get '/login' => 'session#new'
-  post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
-  
-  # resources :pages
-  
 end

@@ -17,4 +17,8 @@ class Feeling < ApplicationRecord
   
   has_many :comments
   
+  validates :scale, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 10}
+  
+  validates :title, presence: true
+  
 end

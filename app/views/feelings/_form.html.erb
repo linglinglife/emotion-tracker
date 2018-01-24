@@ -1,0 +1,24 @@
+<% if flash[:errors] %>
+  <strong>Please correct the following errors:</strong>
+  <ul>
+  <% flash[:errors].each do |e| %>
+    <li><%= e %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @feeling do |f| %>
+
+  <%= f.label :scale, "How are you feeling on a scale of 1 - 10?" %>
+  <%= f.text_field :scale %>
+  <br>
+  <%= f.label :title, "Main event" %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  
+  <%= submit_tag 'Update Feelings' %>
+
+
+<% end %>

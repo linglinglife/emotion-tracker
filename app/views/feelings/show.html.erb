@@ -1,0 +1,17 @@
+<h1>Details of Feelings <%= feeling.created_at.to_time.strftime('%B %e, %Y at %l:%M %p') %></h1>
+
+
+<ul>
+  <% @user.feelings.each do |feeling| %>
+
+    <li>
+      <strong><%= feeling.created_at.to_time.strftime('%B %e, %Y at %l:%M %p') %></strong>
+      <br>
+      <%= feeling.scale %>, <%= feeling.title %>
+      <br>
+      <%= feeling.description %>
+      <%= link_to 'Edit', edit_feeling_path( @feeling ) %>
+      <%= link_to 'Delete', feeling_path( @feeling ), method: 'delete' %>
+    </li>
+
+  <% end %>
