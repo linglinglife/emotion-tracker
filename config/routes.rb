@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-
 
   root to: 'pages#home'
   get '/pages/home'
@@ -27,8 +25,8 @@ Rails.application.routes.draw do
   # get 'feelings/new'
   # get 'feelings/create'
   # get 'feelings/edit'
-  # get 'feelings/show'
   # get 'feelings/update'
+  # get 'feelings/show'
   # get 'feelings/destroy'
 
 end
