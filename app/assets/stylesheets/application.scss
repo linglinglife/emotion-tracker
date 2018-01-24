@@ -10,7 +10,7 @@ $hue-range: 20; //of 360deg
 body{ 
   background-color: $bg-color; 
   -webkit-animation: colorChange $time linear 0s infinite;
-  animation: colorChange $time linear 0s infinite ;
+  animation: colorChange $time linear 0s infinite;
 }
 
 @-webkit-keyframes colorChange{
@@ -32,3 +32,4 @@ body{
     }
   } 
 }
+

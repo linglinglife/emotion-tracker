@@ -28,12 +28,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    
     @user = User.find params[:id]
-    
   end
 
   def update
+    @user = User.find params[:id]
+    User.update user_params
+    redirect_to user
   end
 
   def show
@@ -42,6 +43,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    User.destroy params[:id]
+    redirect_to works_path
   end
   
   private
