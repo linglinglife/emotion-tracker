@@ -23,7 +23,7 @@ class FeelingsController < ApplicationController
   end
 
   def edit
-    @feeling = Feeling.find feeling_params
+    @feeling = Feeling.find params[:id]
   end
   
   def update
@@ -44,7 +44,7 @@ class FeelingsController < ApplicationController
   
   private
   def feeling_params
-      params.require(:feeling).permit(:scale, :title, :description, :created_at)
+      params.require(:feeling).permit(:scale, :title, :description, :user_id, :created_at)
   end
 end
   
