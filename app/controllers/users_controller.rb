@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.destroy params[:id]
-    redirect_to works_path
+    redirect_to root_path
   end
   
   private
