@@ -28,7 +28,7 @@ class FeelingsController < ApplicationController
   
   def update
     feeling = Feeling.find params[:id]
-    Feeling.update feeling_params
+    feeling.update feeling_params
     redirect_to @current_user
   end
     

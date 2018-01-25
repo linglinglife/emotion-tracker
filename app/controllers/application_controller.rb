@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
     end
   end 
   
-  
   private
   def fetch_user
     
