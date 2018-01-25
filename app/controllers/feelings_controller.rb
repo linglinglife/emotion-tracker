@@ -3,7 +3,7 @@ class FeelingsController < ApplicationController
   before_action :check_if_logged_in, except: [:show]
   
   def index
-    @works = Feeling.all
+    @feeling = Feeling.all
   end
   
   def new

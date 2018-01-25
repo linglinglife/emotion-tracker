@@ -7,3 +7,7 @@
   
   <%= link_to 'Edit', edit_feeling_path( @feeling ) %>
   <%= link_to 'Delete', feeling_path( @feeling ), method: 'delete' %>
+  
+  <hr>
+  <%= link_to 'Comment', new_feeling_comment_path( @feeling ) %>
+  

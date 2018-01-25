@@ -1,8 +1,18 @@
-<% form_for @comment do |c| %>
+<% if flash[:errors] %>
+<strong>Uh oh! Did you forget something?</strong>
+  <% flash[:errors].each do |e| %>
+    <li><%= e %></li>
+  <% end %>
+<% end %>
 
-<%= f.label :title, "Title" %>
-<%= f.text_field :title %>
-<br>
-<%= f.label :body, "Comment" %>
-<%= f.text_field :body %>
-<br>
+<%= form_for @comment do |c| %>
+
+  <%= c.label :title, "Title" %>
+  <%= c.text_field :title %>
+  <br>
+  <%= c.label :body, "Comment" %>
+  <%= c.text_field :body %>
+
+<%= submit_tag 'Update Comments' %>
+
+<% end %>
