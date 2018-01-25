@@ -2,6 +2,10 @@ class FeelingsController < ApplicationController
   
   before_action :check_if_logged_in, except: [:show]
   
+  def index
+    @works = Feeling.all
+  end
+  
   def new
     @feeling = Feeling.new
   end
@@ -19,20 +23,28 @@ class FeelingsController < ApplicationController
   end
 
   def edit
+    @feeling = Feeling.find feeling_params
+  end
+  
+  def update
+    feeling = Feeling.find params[:id]
+    Feeling.update feeling_params
+    redirect_to @current_user
+  end
+    
+  def show
     @feeling = Feeling.find params[:id]
   end
 
-  def show
-  end
-
-  def update
-  end
 
   def destroy
+    Feeling.destroy params[:id]
+    redirect_to @current_user
   end
   
   private
   def feeling_params
-      params.require(:feeling).permit(:description, :title, :scale)
+      params.require(:feeling).permit(:scale, :title, :description, :created_at)
   end
 end
+  

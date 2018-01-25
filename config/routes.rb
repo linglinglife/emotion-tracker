@@ -28,5 +28,12 @@ Rails.application.routes.draw do
   # get 'feelings/update'
   # get 'feelings/show'
   # get 'feelings/destroy'
+  
+  # get 'comments/new'
+  # get 'comments/create'
+  # get 'comments/edit'
+  # get 'comments/update'
+  # get 'comments/show'
+  # get 'comments/destroy'
 
 end
