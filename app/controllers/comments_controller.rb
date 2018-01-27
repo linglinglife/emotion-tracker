@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find params[:id]
-    @comment = comment.destroy comment_params
+    @comment = comment.destroy 
     redirect_to comment.feeling
   end
   

@@ -40,7 +40,7 @@ class FeelingsController < ApplicationController
 
   def destroy
     Feeling.destroy params[:id]
-    redirect_to @current_user
+    redirect_to @current_user, notice: "Feeling DESTROYED"
   end
   
   private
