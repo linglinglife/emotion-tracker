@@ -17,5 +17,7 @@
     </li>
 
   <% end %>
+  
+  <%= line_chart @user.feelings.group_by_day(:created_at).maximum(:scale) %>
 </ul>
 

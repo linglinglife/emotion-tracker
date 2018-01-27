@@ -5,7 +5,7 @@
   <% end %>
 <% end %>
 
-<%= form_for @comment do |c| %>
+<%= form_for [@feeling, @comment] do |c| %>
 
   <%= c.label :title, "Title" %>
   <%= c.text_field :title %>

@@ -34,6 +34,7 @@ class FeelingsController < ApplicationController
     
   def show
     @feeling = Feeling.find params[:id]
+    @comment = Comment.new
   end
 
 

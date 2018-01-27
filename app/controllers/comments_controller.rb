@@ -4,13 +4,15 @@ class CommentsController < ApplicationController
   
   def new
     @comment = Comment.new
+    @feeling = Feeling.find params[:feeling_id]
   end
 
   def create
     comment = Comment.new comment_params
     comment.user = @current_user
+    comment.feeling_id = params[:feeling_id]
     if comment.save
-      redirect_to @current_user 
+      redirect_to comment.feeling
     else 
       flash[:errors] = comment.errors.full_messages
       @comment = comment
@@ -20,6 +22,7 @@ class CommentsController < ApplicationController
 
   def edit
     @comment = Comment.find params[:id]
+    @feeling = Feeling.find params[:feeling_id]
   end
 
   def update
@@ -33,8 +36,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    Comment.destroy params[:id]
-    redirect_to @current_user
+    comment = Comment.find params[:id]
+    @comment = comment.destroy comment_params
+    redirect_to comment.feeling
   end
   
   private
