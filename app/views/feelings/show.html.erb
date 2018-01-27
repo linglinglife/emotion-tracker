@@ -9,6 +9,9 @@
   <%= link_to 'Delete', feeling_path( @feeling ), method: 'delete' %>
   
   <hr>
+  
+    <h3>Comments</h3>
+    
   <% @feeling.comments.each do |comment| %>
     <div>
       <strong>Reaction: </strong><br>
@@ -19,10 +22,10 @@
       <%= link_to 'Delete Comment', feeling_comment_path( @feeling, comment ), method: 'delete' %> <br>
     </div>
   <% end %>
-  
+
   <hr>
   <%= link_to 'Comment', new_feeling_comment_path( @feeling ) %>
-  
+  <h3>Add New Comment</h3>
   <div>
     <%= render partial: 'comments/form', object: @feeling.comments %>
   </div>
