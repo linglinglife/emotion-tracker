@@ -1,24 +1,19 @@
-# README
+## Project1: Emotional Management App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Test it here: http://relationshipr.herokuapp.com
 
-Things you may want to cover:
+### Known bugs:
+* Able to access others' profiles when logged into any account
 
-* Ruby version
+### Features:
+* Create account with unique email
+* Login with the email and password
+* Log feelings on a scale of 1-10
+* Add comments to different feelings
+* Edit/delete your feelings/comments
+* See your feelings graphed out by date of entry
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Wishlist:
+* Beautiful fonts and general CSS styling
+* Able to show how long ago feelings were created
+* Able to share feelings with others
