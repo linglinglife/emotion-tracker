@@ -2,6 +2,10 @@
 
 Test it here: http://relationshipr.herokuapp.com
 
+### Introduction:
+
+I came up with this to build more self-awareness around my own emotions. Once you can starting tracking it, they can be regulated more easily as you can see common themes, incidences of set-backs, and then how it can affect others.
+
 ### Known bugs:
 * Able to access others' profiles when logged into any account
 
